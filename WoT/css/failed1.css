@@ -52,7 +52,7 @@ a{
 .menu li a{
   color: #fff;
   display: block;
-  max-height: 50px;
+  height: 50px;
   padding: 0 30px;
   text-transform: uppercase;
   line-height: 50px;
@@ -73,5 +73,8 @@ and (max-device-width: 1024px) {
   body{
     background: url('../images/image4.jpg') 50% fixed;
     background-size: cover;
+  }
+  .menu ul{
+    max-height: 50px;
   }
 }
