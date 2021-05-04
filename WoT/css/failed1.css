@@ -44,8 +44,6 @@ a{
   margin-bottom: 10px;
 }
 .menu{
-  max-height: 50px;
-  overflow: hidden;
   background: rgb(44,44,44);
 }
 .menu li{
@@ -73,7 +71,24 @@ a{
 and (min-device-width: 240px)
 and (max-device-width: 1024px) {
   body{
-    background: url('../images/image4.jpg') 50%;
+    background: url('../images/image4.jpg') 50% fixed;
     background-size: cover;
+  }
+  h1{
+    font-size: 50px;
+  }
+  h4{
+    font-size: 35px;
+  }
+  .warg{
+    height: 125px;
+  }
+  .menu{
+    min-height: 60px;
+  }
+  .menu li a{
+    font-size: 19px;
+    min-height: 60px;
+    line-height: 60px;
   }
 }
