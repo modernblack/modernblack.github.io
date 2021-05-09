@@ -5,7 +5,8 @@
   box-sizing: border-box;
 }
 body{
-	background: url('../images/image4.jpg') 50% 0% / cover fixed;
+	background: url('../images/image4.jpg') cover fixed;
+	height: 100%;
 }
 img{
 	max-width: 100%;
