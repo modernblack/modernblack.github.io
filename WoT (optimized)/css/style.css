@@ -6,7 +6,9 @@
 }
 html,body{
   height: 100%;
-  background: url('../images/image4.jpg') 50% 0% / cover fixed;
+}
+body{
+	background: url('../images/image4.jpg') 50% 0% / cover fixed;
 }
 img{
 	max-width: 100%;
