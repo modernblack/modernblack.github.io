@@ -1,3 +1,5 @@
+/* Основна частина */
+
 *,*:before,*:after{
   padding: 0;
   margin: 0;
@@ -5,13 +7,19 @@
   box-sizing: border-box;
 }
 body{
-	background: url('../images/image4.jpg') center center / cover no-repeat fixed;
+	background: url('../images/image4.jpg') 50% 0% / cover no-repeat fixed;
 }
 img{
 	max-width: 100%;
 }
 a{
 	text-decoration: none;
+}
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 .container{
 	max-width: 1080px;
@@ -47,7 +55,7 @@ a{
 	z-index: 2;
 }
 .title{
-	font-size: calc(22px + 10 * (100vw / 1080));
+	font-size: calc(18px + 10 * (100vw / 1080));
 }
 .header__logo{
 	display: none;
@@ -76,7 +84,6 @@ a{
 	color: #fff;
 	text-transform: uppercase;
 	font-size: 18px;
-	text-decoration: none;
 }
 .content{
 	max-width: 1080px;
@@ -95,8 +102,81 @@ a{
 	text-align: center;
 	color: crimson;
 }
-.content__text div{
-	margin: 0 0 20px 0;
+
+/* сторінка "Інформація" */
+
+.famous{
+	margin: 10px 0;
+}
+.flex_space{
+	display: flex;
+	justify-content: space-around;
+}
+.img_list div{
+	padding: 0 10px;
+}
+.link_list div{
+	width: 33.3%;
+}
+
+/* Параша, яку я ніколи не закінчу */
+
+.footer{
+	background: rgb(44,44,44);
+}
+.footer__link{
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 15px;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+}
+
+/* Медіа запроси */
+
+@media (max-width: 425px){
+	.famous{
+		display: flex;
+		flex-direction: column;
+	}
+	.frst{
+		order: 1;
+	}
+	.scnd{
+		order: 2;
+	}
+	.thrd{
+		order: 3;
+	}
+	.frth{
+		order: 4;
+	}
+	.ffth{
+		order: 5;
+	}
+	.sxth{
+		order: 6;
+	}
+	.svnth{
+		order: 7;
+	}
+	.ghth{
+		order: 8;
+	}
+	.nnth{
+		order: 9;
+	}
+	.tnth{
+		order: 10;
+	}
+	.lvnth{
+		order: 11;
+	}
+	.twlfth{
+		order: 12;
+	}
 }
 
 @media (max-width: 959px){
@@ -117,6 +197,9 @@ a{
 }
 
 @media (max-width: 767px){
+	body{
+		background: #000;
+	}
 	body.lock{
 		overflow: hidden;
 	}
