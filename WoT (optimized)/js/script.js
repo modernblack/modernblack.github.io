@@ -10,6 +10,10 @@ function forMobile() {
 	if (w <= 425) {
 		$('.link_list').contents().unwrap();
 		$('.img_list').contents().unwrap();
+		$('.logos_container').contents().unwrap();
+	}
+	else {
+		$('.new').contents().unwrap();
 	}
 }
 forMobile();
