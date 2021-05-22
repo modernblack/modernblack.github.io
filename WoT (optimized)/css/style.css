@@ -89,7 +89,7 @@ body{
 }
 .content{
 	max-width: 1080px;
-	min-height: 100vh;
+	min-height: calc(100vh - 30px);
 	margin: 0 auto;
 	padding: 70px 0 0 0;
 	background: rgba(0,0,0,.6);
@@ -103,6 +103,19 @@ body{
 	font-weight: bold;
 	text-align: center;
 	color: crimson;
+}
+.footer{
+	width: 1080px;
+	background: rgb(44,44,44);
+}
+.footer__link{
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 15px;
+	display: block;
+	height: 30px;
+	line-height: 30px;
 }
 
 /* сторінка "Інформація" */
@@ -206,26 +219,82 @@ input[type=submit]:hover{
 	color:white;
 }
 
-/* Параша, яку я ніколи не закінчу */
+/* сторінка "Таблиці" */
 
-.footer{
-	background: rgb(44,44,44);
-}
-.footer__link{
+.table{
+	width: 90%;
+	margin: 30px 0;
+	border-collapse: collapse;
 	text-align: center;
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 15px;
-	display: block;
-	height: 30px;
-	line-height: 30px;
+	font-weight: normal;
+	font-size: calc(18px + 3 * (100vw / 1080));
+	color: #000;
+}
+.table th{
+	background: rgb(105, 105, 105);
+	border: 3px solid;
+}
+.tank_type{
+	background: rgb(119, 136, 153);
+	border: 3px solid;
+}
+.ussr{
+	background: rgb(255, 165, 0);
+	border: 3px solid;
+}
+.ussr_t{
+	background: rgba(255, 165, 0, 0.75);
+	border: 3px solid;
+}
+.ussr_t:hover{
+	background: rgb(255, 165, 0);
+}
+.germany{
+	background: rgb(128, 128, 128);
+	border: 3px solid;
+}
+.germany_t{
+	background: rgba(128, 128, 128, 0.75);
+	border: 3px solid;
+}
+.germany_t:hover{
+	background: rgb(128, 128, 128);
+}
+.usa{
+	background: rgb(70, 130, 180);
+	border: 3px solid;
+}
+.usa_t{
+	background: rgba(70, 130, 180, 0.75);
+	border: 3px solid;
+}
+.usa_t:hover{
+	background: rgb(70, 130, 180);
+}
+.france{
+	background: rgb(138, 43, 226);
+	border: 3px solid;
+}
+.france_t{
+	background: rgba(138, 43, 226, 0.75);
+	border: 3px solid;
+}
+.france_t:hover{
+	background: rgba(138, 43, 226);
+}
+.mobile_table{
+	display: none;
 }
 
 /* Медіа запити */
+
 @media (max-width: 1080px){
 	.container{
 		min-width: initial;
 		max-width: 1080px;
+	}
+	.footer{
+		width: 100%;
 	}
 }
 @media (max-width: 959px){
@@ -339,6 +408,29 @@ input[type=submit]:hover{
 	}
 }
 
+@media (max-width: 600px){
+	.table{
+		display: none;
+	}
+	.mobile_table, .mobile_table tbody, .mobile_table tr{
+		display: block;
+		width: 100%;
+	}
+	.mobile_table{
+		margin: 30px 0;
+		border-collapse: collapse;
+		text-align: center;
+		font-weight: normal;
+		font-size: calc(18px + 3 * (100vw / 1080));
+		color: #000;
+	}
+	.mobile_table td{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
 @media (max-width: 425px){
 	.famous{
 		display: flex;
@@ -387,3 +479,21 @@ input[type=submit]:hover{
 		margin-top: 10px;
 		width: 35%;
 	}
+	.last{
+	margin-bottom: 25px;
+	}
+}
+@media (max-width: 380px){
+	.login{
+		width: 95%;
+	}
+	input[type=text], input[type=password]{
+		width: 62.5%;
+	}
+	input[type=text]:focus, input[type=password]:focus{
+		width: 78.125%;
+	}
+	input[type=submit]{
+		width: 31.25%;
+	}
+}
