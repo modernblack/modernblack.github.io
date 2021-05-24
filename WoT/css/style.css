@@ -1,0 +1,511 @@
+/* Основна частина */
+
+*,*:before,*:after{
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+img{
+	max-width: 100%;
+}
+a{
+	text-decoration: none;
+}
+body{
+	background: url('../images/image4.jpg') 50% 0% / cover no-repeat fixed;
+}
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.container{
+	min-width: 1080px;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+.header{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
+}
+.header:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgb(44,44,44);
+	z-index: 2;
+}
+.header__body{
+	max-width: 1030px;
+	margin: 0 auto;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	height: 75px;
+	align-items: center;
+}
+.header__title{
+	color: gold;
+	z-index: 2;
+}
+.title{
+	font-size: calc(18px + 10 * (100vw / 1080));
+}
+.header__logo{
+	display: none;
+}
+.header__burger{
+	display: none;
+}
+.header__list{
+	display: flex;
+	position: relative;
+	z-index: 2;
+}
+.header__list li{
+	list-style: none;
+}
+.header__list li:hover{
+	background:#DC143C;
+}
+.header__list li a{
+	display: block;
+	height: 75px;
+	line-height: 75px;
+	padding: 0 10px;
+}
+.header__link{
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 18px;
+}
+.content{
+	max-width: 1080px;
+	min-height: calc(100vh - 30px);
+	margin: 0 auto;
+	padding: 70px 0 0 0;
+	background: rgba(0,0,0,.6);
+}
+.content__text{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	line-height: 30px;
+	font-size: calc(21px + 3 * (100vw / 1080));
+	font-weight: bold;
+	text-align: center;
+	color: crimson;
+}
+.footer{
+	width: 1080px;
+	background: rgb(44,44,44);
+}
+.footer__link{
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 15px;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+}
+
+/* сторінка "Інформація" */
+
+.famous{
+	margin: 10px 0;
+}
+.flex_space{
+	display: flex;
+	justify-content: space-around;
+}
+.img_list div{
+	padding: 0 10px;
+}
+.link_list div{
+	width: 33.3%;
+}
+
+/* сторінка "Галерея" */
+
+.margin{
+	margin-top: 20px;
+}
+.offchannal_logo{
+	width: 19.609%;
+}
+.uk_wot{
+	width: 85%;
+	height: 200px;
+	overflow: hidden;
+}
+.uk_wot img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border: 3px ridge silver;
+}
+.logos_container{
+	margin-top: 30px;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+.logos_container img{
+	width: 14.706%;
+}
+.new{
+	margin-top: 30px;
+}
+.new img{
+	margin: 0 10px;
+}
+
+/* сторніка "Авторизація" */
+
+.login{
+	width: 320px;
+	margin: 30px auto;
+	padding-top:1px;
+	padding-bottom:1px;
+	background:rgba(44, 44, 44, 0.9);
+	border:rgb(44, 44, 44);
+	border-radius:10px;
+	text-align:center;
+}
+input[type="text"], input[type="password"]{
+	border:0;
+	background:none;
+	display:block;
+	margin:20px auto;
+	text-align:center;
+	border:2px solid #DC143C;
+	padding:14px 10px;
+	width:200px;
+	outline:none;
+	color:white;
+	border-radius:24px;
+	transition:0.25s;
+}
+input[type="text"]:focus, input[type="password"]:focus{
+	width:250px;
+	border-color:#8B008B;
+}
+input[type="text"]:focus::-webkit-input-placeholder, input[type="password"]:focus::-webkit-input-placeholder{
+	color: transparent;
+}
+input[type="text"]:focus::-moz-placeholder, input[type="password"]:focus::-moz-placeholder{
+	color: transparent;
+}
+input[type="text"]:focus:-moz-placeholder, input[type="password"]:focus:-moz-placeholder{
+	color: transparent;
+}
+input[type="text"]:focus::-ms-input-placeholder, input[type="password"]:focus::-ms-input-placeholder{
+	color: transparent;
+}
+input[type="submit"]{
+	border:0;
+	background:none;
+	display:block;
+	margin:20px auto;
+	text-align:center;
+	border:2px solid #8B008B;
+	padding:14px 10px;
+	outline:none;
+	width:100px;
+	color:gray;
+	border-radius:24px;
+	transition:0.10s;
+	cursor:pointer;
+}
+input[type="submit"]:hover{
+	background:#8B008B;
+	color:white;
+}
+
+/* сторінка "Таблиці" */
+
+.table{
+	width: 90%;
+	margin: 30px 0;
+	border-collapse: collapse;
+	text-align: center;
+	font-weight: normal;
+	font-size: calc(18px + 3 * (100vw / 1080));
+	color: #000;
+}
+.table th{
+	background: rgb(105, 105, 105);
+	border: 3px solid;
+}
+.tank_type{
+	background: rgb(119, 136, 153);
+	border: 3px solid;
+}
+.ussr{
+	background: rgb(255, 165, 0);
+	border: 3px solid;
+}
+.ussr_t{
+	background: rgba(255, 165, 0, 0.75);
+	border: 3px solid;
+}
+.ussr_t:hover{
+	background: rgb(255, 165, 0);
+}
+.germany{
+	background: rgb(128, 128, 128);
+	border: 3px solid;
+}
+.germany_t{
+	background: rgba(128, 128, 128, 0.75);
+	border: 3px solid;
+}
+.germany_t:hover{
+	background: rgb(128, 128, 128);
+}
+.usa{
+	background: rgb(70, 130, 180);
+	border: 3px solid;
+}
+.usa_t{
+	background: rgba(70, 130, 180, 0.75);
+	border: 3px solid;
+}
+.usa_t:hover{
+	background: rgb(70, 130, 180);
+}
+.france{
+	background: rgb(138, 43, 226);
+	border: 3px solid;
+}
+.france_t{
+	background: rgba(138, 43, 226, 0.75);
+	border: 3px solid;
+}
+.france_t:hover{
+	background: rgba(138, 43, 226);
+}
+.mobile_table{
+	display: none;
+}
+
+/* Медіа запити */
+
+@media (max-width: 1080px){
+	.container{
+		min-width: initial;
+		max-width: 1080px;
+	}
+	.footer{
+		width: 100%;
+	}
+}
+@media (max-width: 959px){
+	.header__title{
+		display: none;
+	}
+	.header__logo{
+		display: initial;
+		flex: 0 0 60px;
+		overflow: hidden;
+		position: relative;
+		z-index: 3;
+	}
+	.header__logo img{
+		max-width: 100%;
+		display: block;
+	}
+	.offchannal_logo{
+		width: calc(160px + (0.1 + 0.1 * 0.7) * ((100vw - 320px) / 1080));
+	}
+}
+
+@media (max-width: 767px){
+	body{
+		background: #000;
+	}
+	body.lock{
+		overflow: hidden;
+	}
+	.header__body{
+		height: 50px;
+	}
+	.header__logo{
+		flex: 0 0 40px;
+	}
+	.header__burger{
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		position: relative;
+		z-index: 3;
+		cursor: pointer;
+	}
+	.header__burger span{
+		position: absolute;
+		background-color: #fff;
+		left: 0;
+		width: 100%;
+		height: 2.2px;
+		top: 9px;
+		transition: 0.3s;
+	}
+	.header__burger:before,.header__burger:after{
+		content: '';
+		background-color: #fff;
+		position: absolute;
+		width: 100%;
+		height: 2.2px;
+		left: 0;
+		transition: 0.3s;
+	}
+	.header__burger:before{
+		top: 0;
+	}
+	.header__burger:after{
+		bottom: 0;
+	}
+	.header__burger.active span{
+		transform: scale(0);
+	}
+	.header__burger.active:before{
+		transform: rotate(45deg);
+		top: 9px;
+	}
+	.header__burger.active:after{
+		transform: rotate(-45deg);
+		bottom: 9px;
+	}
+	.header__menu{
+		position: fixed;
+		top: -100%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		transition: 0.3s;
+		background-color: rgb(60,60,60);
+		padding: 70px 10px 20px 10px;
+	}
+	.header__menu.active{
+		top: 0;
+	}
+	.header__list{
+		display: block;
+	}
+	.header__list li{
+		margin: 0 0 20px 0;
+	}
+	.content{
+		padding: 45px 0 0 0;
+	}
+	.content__text{
+		font-size: calc(21px + (3 + 3 * 0.7) * ((100vw - 320px) / 1080));
+	}
+	.offchannal_logo{
+		width: calc(170px + (0.1 + 0.1 * 0.7) * ((100vw - 320px) / 1080));
+	}
+	.logos_container img{
+		width: 18%;
+	}
+}
+
+@media (max-width: 600px){
+	.table{
+		display: none;
+	}
+	.mobile_table, .mobile_table tbody, .mobile_table tr{
+		display: block;
+		width: 100%;
+	}
+	.mobile_table{
+		margin: 30px 0;
+		border-collapse: collapse;
+		text-align: center;
+		font-weight: normal;
+		font-size: calc(18px + 3 * (100vw / 1080));
+		color: #000;
+	}
+	.mobile_table td{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+@media (max-width: 425px){
+	.famous{
+		display: flex;
+		flex-direction: column;
+	}
+	.frst{
+		order: 1;
+	}
+	.scnd{
+		order: 2;
+	}
+	.thrd{
+		order: 3;
+	}
+	.frth{
+		order: 4;
+	}
+	.ffth{
+		order: 5;
+	}
+	.sxth{
+		order: 6;
+	}
+	.svnth{
+		order: 7;
+	}
+	.ghth{
+		order: 8;
+	}
+	.nnth{
+		order: 9;
+	}
+	.tnth{
+		order: 10;
+	}
+	.lvnth{
+		order: 11;
+	}
+	.twlfth{
+		order: 12;
+	}
+	.offchannal_logo{
+		width: calc(150px + (0.1 + 0.1 * 0.7) * ((100vw - 320px) / 1080));
+	}
+	.small_img{
+		margin-top: 10px;
+		width: 35%;
+	}
+	.last{
+	margin-bottom: 25px;
+	}
+}
+@media (max-width: 380px){
+	.login{
+		width: 95%;
+	}
+	input[type=text], input[type=password]{
+		width: 62.5%;
+	}
+	input[type=text]:focus, input[type=password]:focus{
+		width: 78.125%;
+	}
+	input[type=submit]{
+		width: 31.25%;
+	}
+}
